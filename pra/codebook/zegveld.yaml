@@ -1,0 +1,72 @@
+# 政策工具编码手册（泽格维尔德 Rothwell & Zegveld 框架）
+#
+# 使用说明：
+#   - category 为一级类目，subcategory 为二级类目
+#   - keywords 为判定线索词，命中即视为候选
+#   - excludes 为排除线索（出现时降低或取消该类目判定）
+#   - 修改本文件后，`pra code --recode` 会按新手册重新编码
+#   - 这是研究工具：所有改动建议同步更新 docs/codebook.md 并记录版本
+
+version: "0.1.0"
+framework: "Rothwell & Zegveld (1985) 政策工具三分法"
+note: >
+  供给型工具指政府直接提供资源与能力；需求型工具指政府拉动市场需求；
+  环境型工具指政府通过规则与激励塑造外部环境。
+
+categories:
+  供给型:
+    definition: 政府通过资金、人才、技术、信息与公共服务直接推动事务发展
+    entries:
+      - subcategory: 资金投入
+        definition: 财政拨款、专项资金、补贴性投入、基金设立
+        keywords: [财政拨款, 专项资金, 资金支持, 经费保障, 设立基金, 财政补助, 投入资金, 预算安排, 以奖代补]
+        excludes: [要求地方配套]
+      - subcategory: 人才培养
+        definition: 学科建设、人才引进、培训体系、职业发展通道
+        keywords: [人才培养, 人才引进, 培训, 队伍建设, 学科建设, 继续教育, 专业技术人员, 人才梯队]
+      - subcategory: 技术支持
+        definition: 技术研发、平台建设、标准研制、成果转化
+        keywords: [技术研发, 关键技术, 科技攻关, 创新平台, 成果转化, 技术标准, 研发中心, 数字化转型]
+      - subcategory: 公共服务
+        definition: 基础设施建设、公共服务供给、信息系统建设
+        keywords: [基础设施建设, 公共服务, 信息系统, 平台建设, 服务网络, 便民服务, 基层服务能力]
+      - subcategory: 信息支持
+        definition: 信息公开、数据共享、宣传引导、统计监测
+        keywords: [信息公开, 数据共享, 信息发布, 宣传引导, 统计监测, 舆情, 科普, 监测评估]
+
+  需求型:
+    definition: 政府通过采购、贸易、价格等手段直接创造或调节需求
+    entries:
+      - subcategory: 政府采购
+        definition: 政府购买服务、集中采购、首购订购
+        keywords: [政府采购, 政府购买服务, 集中采购, 首台套, 首购, 订购, 招标采购]
+      - subcategory: 价格补贴
+        definition: 价格调控、消费补贴、医保支付、税费减免型补贴
+        keywords: [价格补贴, 消费补贴, 医保支付, 补助标准, 报销比例, 降价, 集中带量采购, 价格调控]
+        excludes: [财政补助]
+      - subcategory: 贸易管制
+        definition: 进出口管理、市场准入限制、关税措施
+        keywords: [进出口, 关税, 贸易管制, 市场准入, 负面清单, 许可管理]
+      - subcategory: 海外交流
+        definition: 国际合作、海外机构、走出去
+        keywords: [国际合作, 海外, 走出去, 跨境, 国际交流, 引进来]
+
+  环境型:
+    definition: 政府通过目标、法规、金融、税收与策略性措施塑造外部环境
+    entries:
+      - subcategory: 目标规划
+        definition: 规划、纲要、行动方案、量化指标、时间表
+        keywords: [规划, 纲要, 行动方案, 实施意见, 指导意见, 目标, 指标, 时间表, 路线图, 五年]
+      - subcategory: 法规管制
+        definition: 立法、规章、标准、监管、处罚、准入与退出
+        keywords: [立法, 法规, 规章, 管理办法, 监督管理, 处罚, 执法, 准入, 退出机制, 规范, 备案, 责任制]
+        excludes: [鼓励, 支持]
+      - subcategory: 金融支持
+        definition: 信贷、保险、融资担保、产业基金
+        keywords: [信贷, 融资, 保险, 担保, 产业基金, 金融服务, 上市融资, 债券, 投融资]
+      - subcategory: 税收优惠
+        definition: 税收减免、税前扣除、税率调整
+        keywords: [税收优惠, 减免税, 税前扣除, 税率, 免征, 增值税, 所得税]
+      - subcategory: 策略性措施
+        definition: 试点示范、考核评价、组织领导、部门协同、激励表彰
+        keywords: [试点, 示范, 考核, 评价, 督导, 组织领导, 统筹协调, 部门协同, 激励机制, 表彰, 联席会议, 工作机制]

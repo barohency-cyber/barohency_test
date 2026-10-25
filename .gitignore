@@ -1,0 +1,29 @@
+# byte-compiled
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# local state
+data/corpus/
+data/pra.sqlite3
+data/*.sqlite3
+data/_smoke/
+data/_pytest/
+exports/
+.tmp/
+.tmp2/
+.tmp*/
+.deps/
+.venv/
+.streamlit/secrets.toml
+
+# secrets
+.env
+.secrets/
+*.token
+
+# os
+.DS_Store
+Thumbs.db

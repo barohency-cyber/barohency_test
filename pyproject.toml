@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "policy-research-assistant"
+version = "0.1.0"
+description = "公共政策研究助手：从政策文本到可发表的分析结果"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Unlicense" }
+authors = [{ name = "barohency" }]
+keywords = ["policy analysis", "computational social science", "public administration"]
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+ingest = ["pdfplumber>=0.11", "beautifulsoup4>=4.12", "python-docx>=1.1"]
+ui = ["streamlit>=1.36", "plotly>=5.20"]
+llm = []
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+pra = "pra.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pra*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
